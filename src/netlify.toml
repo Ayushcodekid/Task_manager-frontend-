@@ -1,0 +1,14 @@
+[build]
+  publish = "build" # This is the output directory for React builds (for Create React App)
+  command = "npm start" # Command to build the project
+
+[build.environment]
+  NODE_VERSION = "16" # Use the Node.js version your project requires
+
+[build.cache]
+  paths = ["node_modules/.cache", "build"] # Cache your node_modules and build directories
+
+[[redirects]] 
+  from = "/*" 
+  to = "/index.html" 
+  status = 200 # Ensures React Router works with client-side routing
